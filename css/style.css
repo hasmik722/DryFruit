@@ -1,126 +1,228 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
-
-:root{
-    --main-color: #ff5824;
-    --black: #13131a;
-    --bg: #fff8ee;
-    --border: 0.1rem solid rgba(255,255,255,0.3);
+:root {
+  --main-color: #ff5824;
+  --black: #13131a;
+  --bg: #fff8ee;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
 
-*{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: 0.2s linear;
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 9rem;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar{
-    width: 0.8rem;
+html::-webkit-scrollbar {
+  width: 0.8rem;
 }
 
-html::-webkit-scrollbar-track{
-    background-color: transparent;
+html::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
-    background-color: #fff;
-    border-radius: 5rem;
+html::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5rem;
 }
 
-body{
-    background: var(--bg);
+body {
+  background: var(--bg);
 }
 
-.header{
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:  1.5rem 7%;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+section{
+    padding: 2rem 7%;
 }
 
-.header .logo img{
-    /* width: 100px; */
-    height: 10rem;
-}
-
-.header .navbar a{
-    margin: 0 1rem;
-    font-size: 1.6rem;
-    color: #000;
-}
-
-.header .navbar a:hover{
-    color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
-    padding-bottom: 0.5rem;
-}
-
-.header .icons div{
-    color: #000;
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--main-color);
     cursor: pointer;
-    font-size: 2.5rem;
-    margin-left: 2rem;
 }
 
-.header .icons div:hover{
-    color: var(--main-color);
+.header {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-#menu-btn{
-    display: none;
+.header .logo img {
+  /* width: 100px; */
+  height: 7rem;
 }
 
-.header .search-form{
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+.header .icons div {
+  color: #000;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.header .icons div:hover {
+  color: var(--main-color);
+}
+
+#menu-btn {
+  display: none;
+}
+
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  /* background: rgba(255,200,35, 0.5); */
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+  background-color: #ffb520;
+}
+
+#search-box {
+  background-color: #ffb520;
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+  text-transform: none;
+  /* background: rgba(255,200,35, 0.5); */
+}
+
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+  /* background: rgba(255,200,35, 0.5) */
+}
+
+.header .search-form label {
+  color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  section{
+    padding: 2rem;
+}
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
     position: absolute;
-    top: 115%;
-    right: 7%;
-    /* background: rgba(255,200,35, 0.5); */
-    width: 50rem;
-    height: 5rem;
+    top: 100%;
+    right: -100%;
+    background: #ffb520;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .header .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+}
+
+
+@media (max-width:450px) {
+    html {
+      font-size: 50%;
+    }  
+}
+
+.home{
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.header .search-form input{
-    height: 100%;
-    width: 100%;
-    font-size: 1.6rem;
-    color: var(--black);
-    padding: 1rem;
-    text-transform: none;
-    /* background: rgba(255,200,35, 0.5); */
+.home .content{
+    max-width: 80rem;
 }
 
-.header .search-form label{
-    cursor: pointer;
-    font-size: 2.2rem;
-    margin-right: 1.5rem;
-    color: var(--black);
-    /* background: rgba(255,200,35, 0.5) */
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-.header .search-form label{
-    color: var(--main-color);
+.home .content p{
+    font-size: 2rem;
+    /* font-weight: lighter; */
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff;
 }
