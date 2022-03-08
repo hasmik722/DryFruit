@@ -47,6 +47,20 @@ section{
     padding: 2rem 7%;
 }
 
+.heading{
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -55,6 +69,13 @@ section{
     color: #fff;
     background-color: var(--main-color);
     cursor: pointer;
+    border-radius: 50px;
+}
+
+.btn:hover{
+    color: var(--main-color);
+    background-color: #fff;
+    transition: 5ms;
 }
 
 .header {
@@ -73,7 +94,7 @@ section{
 
 .header .logo img {
   /* width: 100px; */
-  height: 7rem;
+  height: 6rem;
 }
 
 .header .navbar a {
@@ -191,6 +212,21 @@ section{
     width: 90%;
     right: 2rem;
   }
+
+  .home{
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .home .content h3{
+      font-size: 4.5rem;
+  }
+
+  .home .content p{
+    font-size: 1.5rem;
+}
+
 }
 
 
@@ -221,8 +257,56 @@ section{
 
 .home .content p{
     font-size: 2rem;
-    /* font-weight: lighter; */
+    /* font-weight: bold; */
     line-height: 1.8;
     padding: 1rem 0;
     color: #fff;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: #ce9160;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.menu .box-container .box img{
+    height: 10rem;
 }
