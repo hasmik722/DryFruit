@@ -363,3 +363,84 @@ section{
     font-size: 2rem;
     color: #000;
 }
+
+.contact .row{
+    display: flex;
+    /* align-items: center; */
+    background: #ce9160;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row .contacts{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row .contacts h3{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact .row .contacts .share{
+    padding: 1rem 0;
+}
+
+.contact .row .contacts .share a{
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    font-size: 3.5rem;
+    color: #fff;
+    border: #fff;
+    margin: 2rem;
+    border-radius: 50%;
+}
+
+.contact .row .contacts .share a:hover{
+    background-color: var(--main-color);
+}
+
+
+.footer{
+    background: #ce9160;
+    text-align: center;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: 0.7rem 2rem;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background: var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: #000;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+/* .footer .credit span{
+    color: var(--main-color);
+} */
