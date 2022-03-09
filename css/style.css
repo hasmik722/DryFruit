@@ -4,7 +4,7 @@
   --main-color: #ff5824;
   --black: #13131a;
   --bg: #fff8ee;
-  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  --border: 0.1rem solid #ffa521;
 }
 
 * {
@@ -297,16 +297,69 @@ section{
 
 .menu .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 1.5rem;
 }
 
 .menu .box-container .box{
-    padding: 5rem;
+    padding: 2.5rem;
     text-align: center;
     border: var(--border);
 }
 
 .menu .box-container .box img{
+    height: 25rem;
+}
+
+.menu .box-container .box h3{
+    color: #000;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #000;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box:hover{
+    background: #ffe19a;
+}
+
+.menu .box-container .box:hover > *{
+    color: #ff5824;
+}
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 20%;
+}
+
+.review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #000;
+    padding: 1rem 0;
+}
+
+.review .box-container .box .user{
     height: 10rem;
+    width: 10rem;
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+
+.review .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #000;
 }
