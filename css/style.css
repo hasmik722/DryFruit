@@ -82,7 +82,7 @@ section{
   background: var(--bg);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 1.5rem 7%;
   border-bottom: var(--border);
   position: fixed;
@@ -118,6 +118,13 @@ section{
 
 .header .icons div:hover {
   color: var(--main-color);
+}
+
+.header .lang img{
+    height: 2rem;
+    width: 3rem;
+    /* margin: 0 1rem; */
+    margin-left: 2rem;
 }
 
 #menu-btn {
@@ -367,9 +374,10 @@ section{
 .contact .row{
     display: flex;
     /* align-items: center; */
-    background: #ce9160;
+    background: #f3ddb8;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 30px;
 }
 
 .contact .row .map{
@@ -380,32 +388,43 @@ section{
 
 .contact .row .contacts{
     flex: 1 1 45rem;
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
     text-align: center;
 }
 
-.contact .row .contacts h3{
+
+.contact .row .contacts h4{
     text-transform: uppercase;
     font-size: 2rem;
-    color: #fff;
+    color: #000;
+    padding: 1rem;
 }
 
-.contact .row .contacts .share{
-    padding: 1rem 0;
+.contact .row .contacts span{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: #ff5824;
+    display: flex;
+    justify-content: center;
 }
 
-.contact .row .contacts .share a{
-    height: 7rem;
-    width: 7rem;
-    line-height: 7rem;
-    font-size: 3.5rem;
+.footer .share{
+    padding:  0;
+    margin: 0;
+}
+
+.footer .share a{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 3rem;
     color: #fff;
     border: #fff;
-    margin: 2rem;
+    margin: 1rem 2rem;
     border-radius: 50%;
 }
 
-.contact .row .contacts .share a:hover{
+.footer .share a:hover{
     background-color: var(--main-color);
 }
 
@@ -415,27 +434,10 @@ section{
     text-align: center;
 }
 
-.footer .links{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    gap: 1rem;
-}
 
-.footer .links a{
-    padding: 0.7rem 2rem;
-    color: #fff;
-    border: 1px solid #fff;
-    font-size: 2rem;
-}
-
-.footer .links a:hover{
-    background: var(--main-color);
-}
 
 .footer .credit{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #000;
     font-weight: lighter;
     padding: 1.5rem;
