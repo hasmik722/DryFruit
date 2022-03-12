@@ -19,6 +19,8 @@
   transition: 0.2s linear;
 }
 
+#more {display: none;}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -61,7 +63,7 @@ section{
     text-transform: uppercase;
 }
 
-.btn{
+#btn, .btn{
     margin-top: 1rem;
     display: inline-block;
     padding: 1rem 3rem;
@@ -72,11 +74,13 @@ section{
     border-radius: 50px;
 }
 
-.btn:hover{
+#btn:hover, .btn:hover{
     color: var(--main-color);
     background-color: #fff;
     transition: 5ms;
 }
+
+
 
 .header {
   background: var(--bg);
